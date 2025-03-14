@@ -42,7 +42,7 @@ function Navbar() {
             <div className="sidebar-overlay" onClick={()=>setOpen(!open)}></div>
 
             )}
-        <nav id="navbar" className={drop ? "blur drop" : "" } style={{ background : convertHexToRgba("--bg-base",0.8)}}>
+        <nav id="navbar" className={drop ? "blur drop" : "" } style={{ background : drop ? convertHexToRgba("--bg-base",0.8):"transparent"}}>
             <DataWaveLogo/>
             <div className="route-wrapper">
             {

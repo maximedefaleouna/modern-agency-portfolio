@@ -2,9 +2,34 @@ import './Contact.css'
 import { contactInfo } from '../../data';
 import { cssPerfectShape } from '../../util';
 import Socials from '../../components/Socials';
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import { useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
+
 function Contact() {
+
+    const container = useRef(null)
+    useGSAP(()=>{
+        gsap.timeline({
+            delay:0.5,
+            scrollTrigger:{
+                trigger:container.current,
+                start:"20% bottom",
+                end:"bottom top",
+              
+            }
+        })
+        .fromTo("#contact .contact-info-wrapper .contact-info",{x:-50,opacity:0},{x:0 , opacity:1, stagger:0.5})
+        .fromTo("#contact .socials .icon",{x:50, opacity:0},{x:0 , opacity:1 , stagger:0.5})
+        .fromTo(["#contact form h2" , "#contact form .description","#contact form .control","#contact form .btn"],{y:50, opacity:0},{y:0 , opacity:1 , stagger:0.5})
+
+    },{scope:container});
+
     return ( 
-        <section id="contact">
+        <section id="contact" ref={container}>
             <div className="container">
                 <div className='contact-info-wrapper'>
                     {

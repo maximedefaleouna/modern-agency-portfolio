@@ -4,10 +4,37 @@ import {whyChooseUs, ourApproaches} from  "../../data"
 import {convertHexToRgba, cssPerfectShape} from '../../util/index'
 import { Link } from "react-scroll";
 import './About.css'
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import { useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
+    const container = useRef(null)
+    useGSAP(()=>{
+        gsap.timeline({
+            delay:0.5,
+            scrollTrigger:{
+                trigger:container.current,
+                start:"20% bottom",
+                end:"bottom top",
+               
+            }
+        })
+        .fromTo(["#about .vision-item" , " #about .vision-item .image-container"],{y:50, opacity:0},{y:0 , opacity:1 , stagger:0.5})
+        .fromTo(["#about h2"," #about .approach ", "#about .contact-us"],{y:50, opacity:0},{y:0 , opacity:1 , stagger:0.5})
+        .fromTo(["#about .spotlight"],{x:50, opacity:0},{x:0 , opacity:1 , stagger:0.5})
+        .fromTo(["#about .why-choose-us-container .why-choose-us"],{x:50, opacity:0},{x:0 , opacity:1 , stagger:0.5});
+
+
+
+
+    },{scope:container});
+
+
     return (
-        <section id="about">
+        <section id="about" ref={container}>
             <div className="container">
                 <div className="left-column">
                     <div className="spotlight"></div>

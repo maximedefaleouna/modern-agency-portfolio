@@ -3,9 +3,35 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {portfolio} from "../../data"
 import { Autoplay } from "swiper/modules";
 
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import { useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
+
 function Portfolio() {
+
+    const container = useRef(null)
+    useGSAP(()=>{
+        gsap.timeline({
+            delay:0.5,
+            scrollTrigger:{
+                trigger:container.current,
+                start:"20% bottom",
+                end:"bottom top",
+              
+            }
+        })
+        .fromTo(["#portfolio .section-header h3" , " #portfolio .section-header h2"],{y:50, opacity:0},{y:0 , opacity:1 , stagger:0.5})
+        .fromTo("#portfolio .portfolio",{y:50, opacity:0},{y:0 , opacity:1 , stagger:0.5})
+        
+
+
+
+    },{scope:container});
     return (  
-        <section id="portfolio">
+        <section id="portfolio" ref={container}>
             <div className="container">
                 <div className="section-header">
                     <h3>Our portofolio</h3>
