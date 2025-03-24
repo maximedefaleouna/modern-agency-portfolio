@@ -29,18 +29,18 @@ function Footer() {
         <footer ref={container}>
             <div className="container">
                 <section className="newsletter">
-                    <h2>NEWLETTER</h2>
-                    <p> Keep up with our latest news and events. Subscribe to our newsletter
-                    Footer Description: Innovating IT solutions for business transformation.</p>
+                    <h2>NEWSLETTER</h2>
+                    <p>Restez informé(e) de nos dernières actualités et événements. Abonnez-vous à notre newsletter.</p>
+
                     <div className="subscribe">
-                        <input type="email" placeholder="Enter your email address" />
+                        <input type="email" disabled placeholder="Newsletter bloquer pour le moment" />
                         <button type="button">Join</button>
                     </div>
                 </section>
                 <section className="box-wrapper">
                     <div className="box">
                         <DataWaveLogo/>
-                    <p>Innovation IT solutions for business transformation</p>
+                    <p>Solutions informatiques innovantes pour la transformation des entreprises et vos activités</p>
                     <Socials/>
                     </div>
                     {

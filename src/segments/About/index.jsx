@@ -1,5 +1,5 @@
 import VRIMage from "../../assets/vr.png"
-import PersonnelImage from "../../assets/pic-1.png"
+import PersonnelImage from "../../assets/cool.png"
 import {whyChooseUs, ourApproaches} from  "../../data"
 import {convertHexToRgba, cssPerfectShape} from '../../util/index'
 import { Link } from "react-scroll";
@@ -43,12 +43,12 @@ function About() {
 
                         <div className="vision-item">
                             <div className="vision-content">
-                                <h2>Our Vision</h2>
-                                <h4 className="title">Transforming Technology into Progress</h4>
+                                <h2>Notre Vision</h2>
+                                <h4 className="title">Transformer la technologie pour façonner un avenir meilleur</h4>
                                 <p className="description">
-                                    Our vision is to empower businesses with practical,
-                                    cutting-edge IT solutions that drive growth, streamline
-                                    processes, and enhance competitiveness.
+                                Notre vision est de permettre aux entreprises d'accéder à des solutions informatiques
+                                innovantes et concrètes, favorisant la croissance, l'optimisation des processus et
+                                renforçant leur compétitivité
                                 </p>
                             </div>
                             <div className="image-container">
@@ -60,12 +60,12 @@ function About() {
                         <div className="vision-item">
                             <div className="spotlight"/>
                             <div className="vision-content">
-                                <h2>Who We Are</h2>
-                                <h4 className="title">Your Trusted Technology Partner</h4>
+                                <h2>Qui Nous Sommes</h2>
+                                <h4 className="title">Votre Partenaire Technologique de Confiance</h4>
                                 <p className="description">
-                                We are experienced IT professionals delivering tailored tech
-                                solutions to meet each client’s unique goals.
+                                    Nous sommes des professionnels de l'informatique expérimentés, offrant des solutions technologiques sur mesure pour répondre aux objectifs uniques de chaque client.
                                 </p>
+
                             </div>
                             <div className="image-container">
                                 <img src={PersonnelImage} alt="" />
@@ -94,7 +94,7 @@ function About() {
 
                 </div>
                 <div className="right-column">
-                    <h2 className="title">Our approach</h2>
+                    <h2 className="title">Notre Approche</h2>
                     <div className="boxes-wrapper">
                         {
                             ourApproaches.map((approach , index)=>(
@@ -114,7 +114,7 @@ function About() {
                             <h2 className="title">
                                 Reach out to see how our IT solutions can boost your success
                             </h2>
-                            <Link to="contact" smooth={true} className="btn primary">Contact Us</Link>
+                            <Link to="contact" smooth={true} className="btn primary">Nous contacter</Link>
                         </div>
                     </div>
 

@@ -28,13 +28,14 @@ function Blog() {
             <div className="container">
                 <div className="section-header">
                     <h3>Blog Post</h3>
-                    <h2>Insights and Innoations</h2>
+                    <h2>Perspectives et Innovations</h2>
                 </div>
                 <div className="blogs-grid">
                     {
                         blogPost.map((blog,index)=>(
-                            <div className="blog-card"
-                            key={index}>
+                            <a href={blog.link} target='_blank' key={index}>
+                                <div className="blog-card"
+                            >
                                 <div className="top">
                                     <img src={blog.image} alt="" />
                                 </div>
@@ -44,6 +45,7 @@ function Blog() {
                                 </div>
 
                             </div>
+                            </a>
                         ))
                     }
                 </div>
@@ -53,3 +55,5 @@ function Blog() {
 }
 
 export default Blog;
+
+

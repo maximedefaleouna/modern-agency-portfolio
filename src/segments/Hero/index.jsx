@@ -3,7 +3,7 @@ import { convertHexToRgba } from "../../util"
 import { Link } from "react-scroll";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { FaProjectDiagram } from "react-icons/fa";
-import heroImage from "../../assets/hero.png"
+import heroImage from "../../assets/bb.png"//hero.png
 import BoxAnimation from "../../assets/BoxAnimation"
 import gsap from "gsap"
 import { useEffect } from "react";
@@ -26,14 +26,12 @@ function Hero() {
             <div className="container">
                 <div>
                     <h4 className="text-primary hero-subtitle"
-                        style={{ background: convertHexToRgba("--primary", 0.2) }}>Digital Innovation And Expansion</h4>
-                    <h1 className="hero-title">Build, Innovate, And Transform with Us</h1>
-                    <p className="hero-description"> Datawave brings your ideas to life with custom software, web, and
-                        mobile solutions. From concept to launch, we drive your business
-                        forward.</p>
+                        style={{ background: convertHexToRgba("--primary", 0.2) }}>Innovation digitale et développement</h4>
+                    <h1 className="hero-title">Construisez, Innovez et Transformez avec nous</h1>
+                    <p className="hero-description"> Nous donnons vie à vos idées avec des solutions logicielles, web et mobiles sur mesure. De la conception au lancement, nous propulsons votre entreprise vers l'avenir.</p>
                     <div className="buttons-wrapper">
                         <Link to="contact" smooth={true} className="btn primary">Get Started <FaArrowTrendUp/></Link>
-                        <Link to="projects" smooth={true} className="btn ">See our Work <FaProjectDiagram/></Link>
+                        <a  className="btn ">See our Work <FaProjectDiagram/></a>
 
                     </div>
                 </div>

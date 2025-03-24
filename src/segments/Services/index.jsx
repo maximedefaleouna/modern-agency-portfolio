@@ -37,8 +37,8 @@ function Services() {
         <div className="spotlight"></div>
         <div className="container">
             <div className="section-header">
-                <h3>Our services</h3>
-                <h2>Empowering Your Business with Tailored IT Solutions</h2>
+                <h3>Nos services</h3>
+                <h2>Accompagner votre entreprise avec des solutions informatiques </h2>
 
             </div>
             <div className="services">

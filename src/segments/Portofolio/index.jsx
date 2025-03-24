@@ -34,8 +34,8 @@ function Portfolio() {
         <section id="portfolio" ref={container}>
             <div className="container">
                 <div className="section-header">
-                    <h3>Our portofolio</h3>
-                    <div className="h2">Showcasing Innovative IT Solutions that Drive Real Results</div>
+                    <h3>Notre portofolio</h3>
+                    <div className="h2">Mettre en avant des solutions informatiques innovantes</div>
 
                 </div>
                 <Swiper className="portfolio-wrapper"

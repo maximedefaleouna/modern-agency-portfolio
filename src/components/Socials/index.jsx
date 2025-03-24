@@ -7,7 +7,7 @@ function Socials() {
     return (
         <div className="socials">{
             socialHandles.map((list,index)=>(
-                <a href={list.link} target="_blank"
+                <a  
                 className="icon" style={{
                     ...cssPerfectShape(40,40),
                     background: convertHexToRgba("--primary",0.5),

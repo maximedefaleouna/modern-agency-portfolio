@@ -36,8 +36,8 @@ function Testimonials() {
             <div className="container">
                 <div className="spotlight"></div>
                 <div className="section-header">
-                    <h3>What our clients say</h3>
-                    <h2>Trusted Worldwide for Cutting-Edge IT Solutions</h2>
+                <h3>Ce que disent nos clients</h3>
+                <h2>Des solutions informatiques de confiance, adaptées à vos besoins</h2>
                 </div>
                 <Swiper className="testimonials-wrapper"
                     slidesPerView={1}

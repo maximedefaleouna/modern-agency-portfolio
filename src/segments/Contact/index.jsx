@@ -7,9 +7,12 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 import { useRef } from "react";
+import { useEffect } from 'react';
 gsap.registerPlugin(ScrollTrigger);
 
 function Contact() {
+    
+
 
     const container = useRef(null)
     useGSAP(()=>{
@@ -27,8 +30,12 @@ function Contact() {
         .fromTo(["#contact form h2" , "#contact form .description","#contact form .control","#contact form .btn"],{y:50, opacity:0},{y:0 , opacity:1 , stagger:0.5})
 
     },{scope:container});
+    useEffect(()=>{
+        console.log("monté")
+    },[])
 
     return ( 
+        
         <section id="contact" ref={container}>
             <div className="container">
                 <div className='contact-info-wrapper'>
@@ -48,41 +55,44 @@ function Contact() {
                     }
                     <Socials/>
                 </div>
-                <form>
+                <form action="https://formspree.io/f/mnnpvryq" method="POST" >
                     <div className="top">
                         <h2>Get In Touch</h2>
                         <p className="description">
-                        Have a project in mind or need expert advice? We're here to help!
-                        Reach out to our team for personalized consultations, inquiries,
-                        or to start your next big project today.
+                        Vous avez un projet en tête ou besoin de conseils  ? Nous sommes là pour vous accompagner ! Contactez notre
+                        équipe pour des consultations personnalisées, des demandes d'informations ou pour démarrer votre prochain grand projet dès aujourd'hui
                         </p>
                     </div>
                     <div className="middle">
                         <input 
                         type="text"
                         name="fullName"
-                        id="" 
-                        placeholder='Full name'
+                        spellCheck="false"
+                        id="id1" 
+                        placeholder='Nom et prenoms'
                         className='control'
                         />
+           
                          <input 
                         type="email"
                         name="email"
-                        id="" 
-                        placeholder='Email adress'
+                        id="id2" 
+                        placeholder='adresse mail'
                         className='control'
                         />
+                       
                          <input 
                         type="tel"
                         name="phoneNumber"
-                        id="" 
-                        placeholder='Phone number'
+                        id="id3" 
+                        placeholder='Numero de téléphone'
                         className='control'
                         />
-                        <textarea name="message" id="" placeholder='votre message' className='control'></textarea>
+                           <textarea name="message"  spellCheck="false" id="" placeholder='votre message' className='control' ></textarea>
+                      
                     </div>
                     <div className="bottom">
-                        <button type='button' className='btn primary'> Send Message</button>
+                        <button type="submit"  className='btn primary'> Envoyer</button>
                     </div>
                 </form>
             </div>
@@ -91,3 +101,4 @@ function Contact() {
 }
 
 export default Contact;
+

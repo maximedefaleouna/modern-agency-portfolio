@@ -7,7 +7,7 @@ function DataWaveLogo () {
 
     return ( <div className="logo">
         <Logo/>
-        <h1>DataWave</h1>
+        <h1>Maxime DEF</h1>
     </div>  );
 }
 
