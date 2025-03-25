@@ -7,6 +7,7 @@ import heroImage from "../../assets/bb.png"//hero.png
 import BoxAnimation from "../../assets/BoxAnimation"
 import gsap from "gsap"
 import { useEffect } from "react";
+import cv from "../../assets/CV.pdf"
 
 function Hero() {
     useEffect(()=>{
@@ -30,8 +31,8 @@ function Hero() {
                     <h1 className="hero-title">Construisez, Innovez et Transformez avec nous</h1>
                     <p className="hero-description"> Nous donnons vie à vos idées avec des solutions logicielles, web et mobiles sur mesure. De la conception au lancement, nous propulsons votre entreprise vers l'avenir.</p>
                     <div className="buttons-wrapper">
-                        <Link to="contact" smooth={true} className="btn primary">Get Started <FaArrowTrendUp/></Link>
-                        <a  className="btn ">See our Work <FaProjectDiagram/></a>
+                        <a href={cv} target="_blank"  className="btn primary">Voir le CV<FaArrowTrendUp/></a>
+                        <a href="https://maximedefa.netlify.app/" target="_blank"  className="btn ">See our Work <FaProjectDiagram/></a>
 
                     </div>
                 </div>
